@@ -2,11 +2,12 @@ package vac;
 import java.util.Scanner;
 public class BinaryToDecimal {
 	public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a binary number: ");
-        String binary = scanner.nextLine();
-        int decimal = binaryToDecimal(binary);
-        System.out.println("Decimal equivalent: " + decimal);
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter a binary number: ");
+            String binary = scanner.nextLine();
+            int decimal = binaryToDecimal(binary);
+            System.out.println("Decimal equivalent: " + decimal);
+        }
     }
 
     public static int binaryToDecimal(String binary) {
